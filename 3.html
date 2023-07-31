@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            const numbers = [];
+            
+            function obtenerNumero() {
+            const input = prompt("Introduce un número:");
+            return input;
+            }
+            
+            function agregarNumero() {
+            const input = obtenerNumero();
+            if (input === null) {
+                mostrarSuma();
+                return;
+            }
+            
+            const num = Number(input);
+            if (!isNaN(num)) {
+                numbers.push(num);
+                agregarNumero();
+            } else {
+                alert("¡Error! Debes introducir un número válido.");
+                agregarNumero();
+            }
+            }
+            
+            function mostrarSuma() {
+            const sum = numbers.reduce((acc, val) => acc + val, 0);
+            alert(`La suma total de los números introducidos es: ${sum}`);
+            }
+            
+            agregarNumero();
+    </script>
+    
+</body>
+</html>

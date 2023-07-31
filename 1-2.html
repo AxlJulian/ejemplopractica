@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    ><script>
+            let nota;
+
+            do {
+                nota = parseInt(prompt("Ingrese la nota:"));
+
+                    if (nota === null) {
+                        break
+                    }
+                    let calificacion = parseInt(nota)
+                    if (isNaN(calificacion)) {
+                        alert("Ingrese calificacion.")
+                    } 
+                    else {
+                    if (calificacion >= 0 && calificacion <= 3) {
+                        alert("Muy deficiente")
+                    } 
+                     if (calificacion > 3 && calificacion <= 5) {
+                        alert("Insuficiente")
+                    } 
+                     if (calificacion > 5 && calificacion <= 6) {
+                        alert("Suficiente")
+                    } 
+                     if (calificacion > 6 && calificacion <= 7) {
+                        alert("Bien")
+                    } 
+                     if (calificacion > 7 && calificacion <= 9) {
+                        alert("Notable")
+                    } 
+                     if (calificacion > 9 && calificacion <= 10) {
+                        alert("Sobresaliente")
+                    } 
+                    
+                }
+
+            } while (true);
+    </script>
+    
+</body>
+</html>
